@@ -7,11 +7,9 @@ const app = express();
 //conectamos a la BD
 conectarDB();
 
+app.use(express.json());
 app.use('/api/productos', require('./routes/producto'));
-//definimos la ruta principal
-// app.get('/', (req, res)=> {
-//     res.send('Hola mundo');
-// });
+
 
 app.listen (4000, ()=> {
     console.log("el servidor esta corriendo perfectamente");
