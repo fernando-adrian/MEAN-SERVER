@@ -1,26 +1,26 @@
 const mongoose = require('mongoose');
 
 const ProductoSchema = mongoose.Schema({
-    producto: {
-        tpee: String,
+    nombre: {
+        type: String,
         required: true
     },
     categoria: {
-        tpee: String,
+        type: String,
         required: true
     },
     ubicacion: {
-        tpee: String,
+        type: String,
         required: true
     },
     precio: {
-        tpee: String,
+        type: Number,
         required: true
     },
     fechaCreacion: {
-        tpee: Date,
+        type: Date,
         default: Date.now()
-    },
+    }
 });
 
 module.exports = mongoose.model('Producto', ProductoSchema);
